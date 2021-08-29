@@ -1,0 +1,115 @@
+@import 'variables';
+
+body{
+    font-family: $font-family-sans-serif;
+    margin: 0;
+}
+h1,h2{
+    color: $titleColor;
+    text-align: center;
+}
+
+button{
+    border: none;
+    background: $primaryColor;
+    color: #fff;
+    display: inline-flex;
+    width: 80px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:hover{
+    background: $secondaryColor;
+}
+
+button:focus {
+    outline: thin dotted;
+    outline: 0px auto -webkit-focus-ring-color;
+    outline-offset: 0px;
+}
+
+input {
+background: transparent;
+width: 100%;
+font-family: "Roboto", sans-serif;
+font-size: 14px;
+color: #cecece;
+border: none;
+}
+
+input:focus {
+outline: 0;
+background: transparent;
+}
+
+input:-internal-autofill-selected {
+    background-color: #000 !important;
+}
+
+.content-page{
+    display: flex;
+    flex-direction: row;
+}
+.content-wrapper{
+    box-sizing: border-box;
+    padding: 40px;
+}
+.content-wrapper:nth-child(1){
+    border-right: 1px solid #cecece;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+.content-wrapper:nth-child(2){
+    margin-left: auto;
+}
+.hidden{
+    display: none;
+}
+.box-input{
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    &_border{
+        border: 1px solid #cecece;
+    }
+    &_label{
+        color: $primaryColor;
+        font-weight: bold;
+    }
+    &_input{
+        padding: 5px 10px;
+    }
+}
+
+.box-input--phone{
+    padding: 0 10px 0 0;
+}
+.box-input--whatsapp{
+    padding: 0 0 10px 0;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    tr:nth-child(odd){
+        background: #cecece;
+    }
+    th{
+        background: $primaryColor;
+        color: #fff;
+        padding: 5px 10px;
+    }
+    td{
+        padding: 5px 10px;
+
+        a:nth-child(1){
+            margin-right: 10px;
+        }
+    }
+}
